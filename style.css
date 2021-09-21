@@ -33,7 +33,7 @@ body{
     margin: 3rem 0;
 }
 
-.grid{
+.flex{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -41,27 +41,49 @@ body{
 
 .left,
 .right{
-    width: 48%;
-    height: 50vh;
-    background-color: white;
+    width: 45%;
+    min-height: 50vh;
 }
 
 .title h2{
-    font-family: "Poppins", cursive;
+    font-family: 'Poppins', sans-serif;
     color: white;
     text-align: center;
     font-size: 200%;
 }
 
 .left{
-    background: url(./images/images_salon/salon1_e6coif.jpg) no-repeat center center /cover;
+    background: url(./images/images_salon/salon1_e6coif_blurry.jpg) no-repeat center center / cover;
+    height: 100%;
     border-radius: 3%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
 }
 
 
-.left > p{
+.left p{
     text-align: center;
-    font-size: 150%;
-    font-family: "Specimen", sans-serif;
+    font-size: 180%;
+    font-family: 'Open Sans', sans-serif;
     color: white;
+}
+
+.right form{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.right input{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px 10px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 130%;
 }
