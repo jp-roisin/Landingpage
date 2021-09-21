@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --violet: #584a7c;
+    --magenta: #B539B5; 
+}
+
+body{
+    background: url(./images/images_charte/bg_e6coif-desktop.svg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--violet);
+}
+
+.container{
+    margin: 0 auto;
+    width: 80%;
+}
+
+.logo{
+    background: url(./images/images_charte/logo_e6coif.svg);
+    min-height: 100px;
+    width: 600px;
+}
+
+.title{ 
+    width: 100%;
+    min-height: 10vh;
+    margin: 3rem 0;
+}
+
+.grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left,
+.right{
+    width: 48%;
+    height: 50vh;
+    background-color: white;
+}
+
+.title h2{
+    font-family: "Poppins", cursive;
+    color: white;
+    text-align: center;
+    font-size: 200%;
+}
+
+.left{
+    background: url(./images/images_salon/salon1_e6coif.jpg) no-repeat center center /cover;
+    border-radius: 3%;
+}
+
+
+.left > p{
+    text-align: center;
+    font-size: 150%;
+    font-family: "Specimen", sans-serif;
+    color: white;
+}
