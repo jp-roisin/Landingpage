@@ -1,3 +1,4 @@
+/* GENERAL */
 *{
     margin: 0;
     padding: 0;
@@ -7,12 +8,10 @@
 :root{
     --violet: #584a7c;
     --magenta: #B539B5;
-    --vert:  #39b539 ;
 }
 
 body{
-    background: url(./images/images_charte/bg_e6coif-desktop.svg), linear-gradient(90deg, var(--violet) 21%, var(--magenta) 89%) ;
-    
+    background: url(./images/images_charte/bg_e6coif-desktop.svg), linear-gradient(90deg, rgba(88,74,124,0.75) 0%, rgba(147,63,160,0.6) 100%);   
     background-size: cover; 
 }
 
@@ -22,9 +21,8 @@ body{
     width: 80%;
 }
 
-.logo{
-    background: url(./images/images_charte/logo_e6coif.svg);
-    min-height: 100px;
+/* HEADER */
+.logo img{
     width: 600px;
 }
 
@@ -34,6 +32,7 @@ body{
     justify-content: space-between;
 }
 
+/* LEFT & RIGHT */
 .left,
 .right{
     width: 45%;
@@ -58,17 +57,20 @@ body{
     animation: 1s ease 0s 1 SlideFromBottomLeft;
 }
 
-
 .left p{
     text-align: center;
-    font-size: 180%;
-    font-family: 'Open Sans', sans-serif;
+    font-size: 200%;
+    font-family: 'Open Sans', sans-serif;   
+    font-weight: bold;
     color: white;
-    text-shadow: black 1px 2px;
+    text-shadow: 2px 2px black;
 }
 
 .right{
     animation: 1s ease-out 0s 1 SlideFromTopRight;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .right form{
@@ -88,8 +90,10 @@ body{
     color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 180%;
+    margin-bottom: 2rem;
 }
 
+/* INPUT & BUTTON */
 .right input,
 button{
     width: 100%;
@@ -99,6 +103,7 @@ button{
     font-family: 'Open Sans', sans-serif;
     font-size: 130%;
     border: none;
+    margin-bottom: 1rem;
 }
 
 .right input::placeholder{
@@ -107,13 +112,30 @@ button{
 
 .right > form > input:last-child,
 button{
+    width: initial;
+    padding: 5px 2rem;
+    text-align: center;
     cursor: pointer;
-    background-color: var(--violet);
-    border: 3px solid white;
-    color: white;
+    background: linear-gradient(270deg, rgba(88,74,124,1) 0%, rgba(147,63,160,1) 45%);     color: white;
     font-size: 150%;
 }
 
+.right > form > input:last-child:hover,
+button:hover{
+    transition-duration: .3s;
+    scale: 110%;
+}
+
+#button-show{
+    margin-top: 10rem;
+}
+
+#button-hide{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* COMMENTS */
 #comments{
     width: 100%;
 }
@@ -171,14 +193,14 @@ button{
 }
 
 .button{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
     animation: 3s ease 0s SlideFromBottom;
-    width: 50%;
-    margin: 0 auto;
-    margin-bottom: 3rem;
 }
 
-
-
+/* ANNIMATIONS */
 @keyframes SlideFromBottomLeft {
     0%{
         transform: translate(-100%, 100%);
@@ -206,5 +228,77 @@ button{
     }
     100%{
         transform: translateY(0);
+    }
+}
+
+
+/* RESPONSIVE */    
+@media screen and (max-width: 1440px) {
+    .container{
+        width: 95%;
+    }
+    .left{
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .flex{
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 1rem 0;
+    }
+    .flex > *{
+        margin: 1rem 0;
+        width: 80%;
+    }
+    .logo img{
+        margin: 2rem auto;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .left{
+        display: none;
+    }
+    .container{
+        width: 95%;
+        margin-top: 1rem;
+    }
+    .flex{
+        margin-top: 0;
+    }
+    .flex > *{
+        margin-top: 0;
+    }
+    .right form{
+        width: 100%;
+    }
+    .right > form > input:last-child{
+        padding: 5px .5em;
+    }
+    .right > form > input:last-child:hover{
+        scale: 100%;
+    }
+    #comments{
+        width: 100%;
+        margin: 0;
+
+    }
+    #hide{
+        width: 100%;
+        margin: 0;
+    }
+    .card{
+        flex-direction: column;
+        width: 100%;
+    }
+    .card-core{
+        width: 100%;
+        margin: 0;
+    }
+    .card-header{
+        flex-direction: column;
     }
 }

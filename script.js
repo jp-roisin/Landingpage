@@ -5,7 +5,6 @@ let hide = document.querySelector('#hide');
 
 // Cacher les éléments
 hide.style.display = "none";
-buttonShow.style.marginTop = "10rem";
 buttonHide.style.display = "none";
 
 // Création des évenements button
