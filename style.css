@@ -115,12 +115,15 @@ button{
 }
 
 #comments{
+    width: 100%;
+}
+
+#hide{
     width: 60%;
     margin: 0 auto;
     margin-top: 5rem;
     display: flex;
     flex-direction: column;
-    /* animation: 3s ease 0s SlideFromBottom; */
 }
 
 .card{
@@ -168,7 +171,8 @@ button{
 }
 
 .button{
-    width: 70%;
+    animation: 3s ease 0s SlideFromBottom;
+    width: 50%;
     margin: 0 auto;
     margin-bottom: 3rem;
 }
