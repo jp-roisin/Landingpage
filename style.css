@@ -10,9 +10,14 @@
     --magenta: #B539B5;
 }
 
+::selection{
+    background-color: var(--magenta);
+}
+
 body{
     background: url(./images/images_charte/bg_e6coif-desktop.svg), linear-gradient(90deg, rgba(88,74,124,0.75) 0%, rgba(147,63,160,0.6) 100%);   
-    background-size: cover; 
+    background-size: cover;
+    overflow: hidden;
 }
 
 .container{
@@ -46,6 +51,14 @@ body{
     font-size: 200%;
 }
 
+hr{
+    height: 3px;
+    background: white;
+    border: none;
+    border-radius: 3px 3px;
+    box-shadow: none;
+}
+
 .left{
     background: url(./images/images_salon/salon1_e6coif_blurry.jpg) no-repeat center center / cover;
     height: 100%;
@@ -54,7 +67,7 @@ body{
     align-items: center;
     justify-content: center;
     padding: 3rem;
-    animation: 1s ease 0s 1 SlideFromBottomLeft;
+    animation: .8s ease 0s 1 SlideFromBottomLeft;
 }
 
 .left p{
@@ -67,7 +80,7 @@ body{
 }
 
 .right{
-    animation: 1s ease-out 0s 1 SlideFromTopRight;
+    animation: .8s ease-out 0s 1 SlideFromTopRight;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,13 +102,15 @@ body{
 .right h2{
     color: white;
     font-family: 'Poppins', sans-serif;
-    font-size: 180%;
+    font-size: 200%;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
-/* INPUT & BUTTON */
+/* INPUT , SELECT & BUTTON */
 .right input,
-button{
+button,
+.time{
     width: 100%;
     height: 50px;
     border-radius: 10px 10px;
@@ -106,9 +121,16 @@ button{
     margin-bottom: 1rem;
 }
 
-.right input::placeholder{
-    color: black;
+.time > option{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    height: 300px;
 }
+
+
+/* .right input::placeholder{
+    color: black;
+} */
 
 .right > form > input:last-child,
 button{
@@ -127,12 +149,12 @@ button:hover{
 }
 
 #button-show{
-    margin-top: 10rem;
+    margin: 3rem auto;
 }
 
 #button-hide{
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 /* COMMENTS */
@@ -154,6 +176,7 @@ button:hover{
     width: 100%;
     background: white;
     margin-bottom: 1rem;
+    border-radius: 8px 8px;
 }
 
 .face{
@@ -197,7 +220,15 @@ button:hover{
     display: flex;
     flex-direction: row;
     justify-content: center; 
-    animation: 3s ease 0s SlideFromBottom;
+    animation: 2s ease 0s SlideFromBottom;
+}
+
+/* FOOTER */
+footer p{
+    text-align: center;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 3rem;
 }
 
 /* ANNIMATIONS */
@@ -235,14 +266,14 @@ button:hover{
 /* RESPONSIVE */    
 @media screen and (max-width: 1440px) {
     .container{
-        width: 95%;
-    }
-    .left{
-        max-width: 500px;
+        width: 90%;
     }
 }
 
 @media screen and (max-width: 950px) {
+    body{
+        overflow: visible;
+    }
     .flex{
         flex-direction: column-reverse;
         align-items: center;
@@ -256,11 +287,25 @@ button:hover{
         margin: 2rem auto;
         width: 90%;
     }
+    .left{
+        animation: none;
+    }
+    .right{
+        animation: none;
+    }
+    .button{
+        animation: none;
+    }
+    #button-show{
+        margin-top: 1rem;
+    }
+
 }
 
 @media screen and (max-width: 375px) {
     .left{
         display: none;
+        animation: none;
     }
     .container{
         width: 95%;
@@ -272,19 +317,24 @@ button:hover{
     .flex > *{
         margin-top: 0;
     }
+    .right{
+        animation: none;
+        margin-bottom: 1rem;
+    }
     .right form{
         width: 100%;
     }
     .right > form > input:last-child{
         padding: 5px .5em;
     }
-    .right > form > input:last-child:hover{
+    .right > form > input:last-child:hover,
+    #button-show:hover,
+    #button-hide:hover{
         scale: 100%;
     }
     #comments{
         width: 100%;
         margin: 0;
-
     }
     #hide{
         width: 100%;

@@ -21,22 +21,41 @@
         <div class="flex">
             <div class="left">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores neque praesentium dicta repellat animi quae dignissimos? Vitae, sed assumenda provident quibusdam beatae.
+                    Le salon de coiffure le plus en vue de Charleroi! Venez vous faire shampouiner dans une ambiance chaleureuse. E6'coif est ouvert du lundi au samedi de 9h à 18h.
                 </p>
             </div>
-            <div class="right">
-                <h2><span><i class="fas fa-calendar-check"></i></span></i>Prenez rendez-vous dès maintenant!</h2>
+            <div class="right" data-dropup-auto="false">
+                <h2><span><i class="fas fa-calendar-check"></i></span></i>Prenez rendez-vous dès maintenant! <hr></h2>
                 <form action="">
                     <input type="email" placeholder="Email">
                     <input type="date" name="" id="">
-                    <input type="time" name="" id="">
-                    <input type="submit" value="Valider Mon RDV">
+                    <select class="time">
+                        <option value="1">09h00</option>
+                        <option value="2">09h30</option>
+                        <option value="3">10h00</option>
+                        <option value="4">10h30</option>
+                        <option value="5">11h00</option>
+                        <option value="6">11h30</option>
+                        <option value="7">12h00</option>
+                        <option value="8">12h30</option>
+                        <option value="9">13h00</option>
+                        <option value="10">13h30</option>
+                        <option value="11">14h00</option>
+                        <option value="12">14h30</option>
+                        <option value="13">15h00</option>
+                        <option value="14">15h30</option>
+                        <option value="15">16h00</option>
+                        <option value="16">16h30</option>
+                        <option value="17">17h00</option>
+                        <option value="18">17h30</option>
+                    </select>
+                    <input type="submit" value="Valider mon RDV">
                 </form>
             </div>
         </div>
         <div id="comments">
             <div id="hide">
-                <!-- Card 1 -->
+                <!-- Card 1 --> 
                 <div class="card">
                     <div class="face">
                         <i class="fas fa-user fa-5x"></i>
@@ -135,10 +154,22 @@
             </div>
             <!-- button -->
             <div class="button">
-                <button id="button-show">Afficher les commentaires</button>
-                <button id="button-hide">Masquer les commentaires</button>
+                <button id="button-show">Afficher les avis</button>
+                <button id="button-hide">Masquer les avis</button>
             </div>
         </div>
+
+    <footer>
+        <p>
+            Ouvert du lundi au samedi de 09h à 19h
+            <br>
+            Rue de Dampremy, 248
+            <br>
+            6000 - Charleroi
+            <br>
+            Téléphone: 071/13 57 96
+        </p>
+    </footer>        
     
     <script src="script.js"></script>
 </body>
